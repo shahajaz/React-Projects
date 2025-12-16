@@ -1,13 +1,13 @@
 import './App.css';
 import Navigation from "./components/navigation"; 
-import Home from "./components/home";                   
+import HomeSection from './components/home';                   
 
 const App = () => {
     return(
         <div>
             <Navigation />
-            <Home />
+            <HomeSection />
         </div>
-    )
+    );
 };
 export default App;
