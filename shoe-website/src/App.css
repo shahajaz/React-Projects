@@ -6,12 +6,12 @@
     box-sizing: border-box;
 }
 body{
-    background: #000000;
+    background: #f3f3f3e1;
     font-family: "Poppins", sans-serif;
 }
 nav{
-    height:90px;
-    max-width: 1280px;
+    height:72px;
+    max-width: auto;
     display: flex;
     margin: 0 auto;
     padding: 15px 45px;
@@ -20,35 +20,35 @@ nav{
     background-color: #000;
 }
 nav ul{
-    display: flex;
     list-style: none;
-    gap: 25px;
+    display: flex;
+    gap: 35px;
 }
-nav ul li{
-    font-size: 1.2rem;
-    font-weight: bold;
+nav ul li a{
     color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 500;
     cursor: pointer;
+    text-decoration: none;
 }
-nav ul li:hover{
+nav ul li a:hover{
     color: #a00202;
     border-bottom: 3px solid #a00202;
+    border-radius: 5px;
 }
 .logo img{
-    width: 90px;
+    width: 120px;
 }
 button{
-    width: 75px;
-    outline: none;
-    border: none;
-    padding: 8px;
-    font-size: 1.2rem;
-    color: #ffffff;
+    all: unset;
+    padding: 10px 25px;
     background-color: #a00202;
-    border-radius: 50px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all ease-in-out .3s;
 }
 button:hover{
-    transform: scale(1.1);
+    background-color: #7b0000;
 }

@@ -1,13 +1,15 @@
-import './App.css';
-import Navigation from "./components/navigation"; 
-import HomeSection from './components/home';                   
+import "./App.css";
+import Navigation from "./components/navigation";
 
 const App = () => {
-    return(
+    return (
+
         <div>
-            <Navigation />
-            <HomeSection />
+            <Navigation/>
+            
         </div>
+            
     );
-};
+}
+
 export default App;

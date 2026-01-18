@@ -2,19 +2,19 @@ const Navigation = () =>{
 
     return(
         <nav>
-                <div className="logo">
-                    <img src="/img/logo.png" alt="logo"/>
-                </div>
+            <div className="logo">
+                <img src="/img/logo.png" alt="logo"/>
+            </div>
+            
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
 
-                <ul>
-                    <li href="#home">Home</li>
-                    <li href="#Lifestyle">Lifestyle</li>
-                    <li href="#about">About Us</li>
-                    <li href="#contact">Contact Us</li>
-                </ul>
-
-                <button>Login</button>
-            </nav>
+            <button>Login</button>
+        </nav>
     );
 
 }
