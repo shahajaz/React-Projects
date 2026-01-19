@@ -52,3 +52,49 @@ button{
 button:hover{
     background-color: #7b0000;
 }
+
+.hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 100px;
+}
+.hero-content{
+    max-width: 50%;
+
+}
+.hero-content h1{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    width: 600px;
+}
+.highlight{
+    color: #a00202;
+    font-weight: bold;
+}
+.hero-content p{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555555;
+    width: 80%;
+}
+.hero-button{
+    all: unset;
+    padding: 12px 25px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.shop-btn{
+    background-color: #a00202;
+}
+.explore-btn{
+    background-color: #1d1c1c;
+    border: 2px solid #a00202;
+    margin-left: 15px;
+}
+.hero-image img{
+    width: 600px;
+}
