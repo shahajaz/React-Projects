@@ -32,9 +32,14 @@ nav ul li a{
 nav ul li a:hover{
   color: #e82300;
   border-bottom: 3px solid #e82300;
+    border-radius: 5px;
 }
 .logo img{
+  margin-top: 15px;
   height: 90px;
+}
+.logo img:hover{
+  transform: scale(1.1);
 }
 .login-btn{
   padding: 8px 16px;
@@ -47,11 +52,24 @@ nav ul li a:hover{
   transition: background-color 0.3s ease;
 }
 .login-btn:hover{
-  background-color: #00bf43;
+  background-color: #003c42;
 }
 .login-btn a{
     all: unset;
     font-size: 1.2rem;
     font-weight: 500;
   color: #ffffff;
+}
+.contact-header{
+  align-items: center;
+  text-align: center;
+  margin-top: 15px;
+}
+.contact-header h1{
+  font-size: 45px;
+  font-weight: 800;
+}
+.contact-header p{
+  font-size: 28px;
+  width: 800px;
 }
