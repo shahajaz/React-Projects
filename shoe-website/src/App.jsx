@@ -2,7 +2,6 @@ import "./App.css";
 import HeroSection from "./components/Hero";
 import Navigation from "./components/navigation";
 
-
 const App = () => {
     return (
 
@@ -13,5 +12,4 @@ const App = () => {
             
     );
 }
-
 export default App;
