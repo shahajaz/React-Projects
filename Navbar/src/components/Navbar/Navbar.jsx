@@ -6,16 +6,24 @@ const Navbar = () => {
     
     return (
     <nav className="navbar">
-        {/* Logo */}
-        <div className="navbar-logo">TechGuy <span>360</span></div>
+        <div className="navbar-logo">Code <span>360</span></div>
 
-      {/* Menu */}
         <ul className={`navbar-menu ${menuOpen ? "active" : ""}`}>
             <li>Home</li>
             <li>About Us</li>
             <li>Services</li>
             <li>Contact Us</li>
         </ul>
+
+        <div className="searchBox">
+            <input type="text" placeholder="Search..."/>
+            <i className="fas fa-search"></i>
+        </div>
+
+        <div className="toggleBtn">
+            <i className="fas fa-moon"></i>
+          {/*   <i className="fas fa-sun"></i> */}
+        </div>
         
         {/* Login Button */}
         <div className="navbar-auth">
