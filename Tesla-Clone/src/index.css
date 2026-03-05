@@ -1,0 +1,63 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+body{
+  width: 100%;
+  color: #000;
+
+}
+.Wrap{
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/public/images/car1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ItemText{
+  font-size: 22px;
+  padding-top: 25vh;
+  text-align: center;
+  color: #ffffff;
+}
+.ButtonGrp{
+  display: flex;
+  margin-top: 35px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  gap: 18px;
+}
+.OrderBtn{
+  padding: 12px 18px;
+  border-radius: 50px;
+  color: #ffffff;
+  background-color: rgba(23, 26, 32, 0.8);
+  transition: all 0.3s ease-in-out;
+  border: 3.5px solid transparent; /* important fix */
+  cursor: pointer;
+}
+.OrderBtn:hover{
+  transform: scale(1.05);
+  background-color: rgba(94, 98, 106, 0.8);
+  border-color: #171a20cc; /* only color change */
+}
+.ViewBtn{
+  padding: 12px 18px;
+  border-radius: 50px;
+  color: #ffffff;
+  background-color: rgba(94, 98, 106, 0.8);
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.ViewBtn:hover {
+  transform: scale(1.05);
+  background-color: #3E6AE1;
+}
