@@ -10,6 +10,10 @@ const App = () => {
     <div className="App">
       <Header />
       <Home />
+      
+      <Section />
+      <Section />
+      <Section />
       <Section />
     </div>
   )

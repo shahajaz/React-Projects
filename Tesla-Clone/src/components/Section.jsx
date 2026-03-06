@@ -13,6 +13,10 @@ const Section = () => {
 
                 <div className="ViewBtn"> View Inventory</div>
             </div>
+
+            <div className="DownArrow">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
         </div>
     )
 }
