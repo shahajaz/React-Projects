@@ -1,24 +1,34 @@
 import React from 'react'
 
-const Section = () => {
+function Section({ title, description, backgroundImg, OrderBtn, ViewBtn }) {
+
+    console.log(title, description, backgroundImg, OrderBtn, ViewBtn);
+
     return (
-        <div className="Wrap">
+        <div
+            className="Wrap"
+            style={{
+                backgroundImage: `url(${backgroundImg})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                height: "100vh"
+            }}
+        >
             <div className="ItemText">
-                <h1>Model S</h1>
-                <p>Order Online for Touch-less delivery</p>
+                <h1>{title}</h1>
+                <p>{description}</p>
             </div>
 
             <div className="ButtonGrp">
-                <div className="OrderBtn">Order Now</div>
-
-                <div className="ViewBtn"> View Inventory</div>
+                <div className="OrderBtn">{OrderBtn}</div>
+                <div className="ViewBtn">{ViewBtn}</div>
             </div>
 
             <div className="DownArrow">
-                <i class="fa-solid fa-chevron-down"></i>
+                <i className="fa-solid fa-chevron-down"></i>
             </div>
         </div>
     )
 }
 
-export default Section;
+export default Section
