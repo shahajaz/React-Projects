@@ -31,4 +31,4 @@ function Section({ title, description, backgroundImg, OrderBtn, ViewBtn }) {
     )
 }
 
-export default Section
+export default Section;

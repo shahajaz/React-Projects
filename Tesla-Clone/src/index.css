@@ -1,51 +1,46 @@
 /* Reset + Global styles */
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
 }
 
-body {
+body{
   width: 100%;
   color: #000;
   overflow-x: hidden;
 }
-
-/* Section Wrapper */
-.Wrap {
+.Wrap{
   width: 100%;
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Title Section */
-.ItemText {
+.ItemText{
   font-size: 22px;
   margin-top: 18vh;
   text-align: center;
+  color: #000000;
+}
+.ItemText:hover{
   color: #ffffff;
 }
-
-.ItemText h1 {
+.ItemText h1{
   font-size: 40px;
   font-weight: 600;
 }
-
-.ItemText p {
+.ItemText p{
   margin-top: 8px;
   font-size: 18px;
 }
-
-/* Buttons Container */
-.ButtonGrp {
+.ButtonGrp{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,8 +49,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* Order Button */
-.OrderBtn {
+.OrderBtn{
   padding: 12px 28px;
   border-radius: 50px;
   color: #ffffff;
@@ -67,12 +61,12 @@ body {
   transition: all 0.3s ease;
 }
 
-.OrderBtn:hover {
+.OrderBtn:hover{
   transform: scale(1.05);
   border: 3.5px solid #000000;
   background-color: rgba(94, 98, 106, 0.9);
 }
-.ViewBtn {
+.ViewBtn{
   padding: 12px 28px;
   border-radius: 50px;
   color: #000000;
@@ -82,18 +76,18 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.ViewBtn:hover {
+.ViewBtn:hover{
   transform: scale(1.05);
   color: #ffffff;
   background-color: #3E6AE1;
 }
-.DownArrow {
+.DownArrow{
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.DownArrow i {
+.DownArrow i{
   color: #ffffff;
   font-size: 18px;
   width: 42px;
@@ -107,12 +101,11 @@ body {
   transition: all 0.3s ease;
   animation: animateDown 1.5s infinite;
 }
-
-.DownArrow i:hover {
+.DownArrow i:hover{
   transform: scale(1.1);
   background-color: rgba(94, 98, 106, 0.9);
 }
-@keyframes animateDown {
+@keyframes animateDown{
   0% {
     transform: translateY(0);
   }
@@ -123,8 +116,65 @@ body {
     transform: translateY(0);
   }
 }
-@media (max-width: 768px) {
+.header-container{
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: transparent;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.logo img{
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  transition: all 0.3s;
+}
+.logo img:hover{
+  transform: scale(1.05);
+}
+.Menu{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.Menu a{
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.Menu a:hover{
+  color: #ffffff;
+  background-color: rgba(0,0,0,1.08);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px){
   .ItemText h1 {
     font-size: 32px;
   }

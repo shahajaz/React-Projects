@@ -22,7 +22,7 @@ const App = () => {
       <Section
         title="Model Y"
         description="Order Online for Touch-less delivery"
-        backgroundImg="/images/Model-Y.jfif"
+        backgroundImg="/images/Model-Y.png"
         OrderBtn="Order Now"
         ViewBtn="View Inventory"
       />
@@ -30,7 +30,7 @@ const App = () => {
       <Section
         title="Model 3"
         description="Order Online for Touch-less delivery"
-        backgroundImg="/images/model-y.jpg"
+        backgroundImg="/images/car2.png"
         OrderBtn="Order Now"
         ViewBtn="View Inventory"
       />
@@ -38,10 +38,28 @@ const App = () => {
       <Section
         title="Model X"
         description="Order Online for Touch-less delivery"
-        backgroundImg="/images/car3.png"
+        backgroundImg="/images/model-x.jpg"
         OrderBtn="Order Now"
         ViewBtn="View Inventory"
       />
+
+      <Section
+        title="Lower Cost Solar Panel in World"
+        description="Money-back guarantee"
+        backgroundImg="/images/solar-panel.jpg"
+        OrderBtn="Order Now"
+        ViewBtn="View Inventory"
+      />
+
+      <Section
+        title="Accessories"
+        description=""
+        backgroundImg="/images/accessories.jpg"
+        OrderBtn="Order Now"
+        ViewBtn="View More!"
+      />
+
+      <Header />
 
     </div>
   )
