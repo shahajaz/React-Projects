@@ -16,9 +16,11 @@ const Header = () => {
             <a href="#">Support</a>
         </div>
 
-        <button>
+        <div class="header-right">
+            <button class="account">Account</button>
 
-        </button>
+            <div className="custom-menu"><i class="fa-solid fa-align-justify"></i></div>
+        </div>
 
     </div>
     )

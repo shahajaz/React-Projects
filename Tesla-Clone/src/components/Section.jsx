@@ -1,8 +1,7 @@
 import React from 'react'
+import { motion } from "framer-motion";
 
 function Section({ title, description, backgroundImg, OrderBtn, ViewBtn }) {
-
-    console.log(title, description, backgroundImg, OrderBtn, ViewBtn);
 
     return (
         <div
@@ -14,19 +13,35 @@ function Section({ title, description, backgroundImg, OrderBtn, ViewBtn }) {
                 height: "100vh"
             }}
         >
-            <div className="ItemText">
+            <motion.div
+                className="ItemText"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
                 <h1>{title}</h1>
                 <p>{description}</p>
-            </div>
+            </motion.div>
 
-            <div className="ButtonGrp">
+            <motion.div
+                className="ButtonGrp"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+            >
                 <div className="OrderBtn">{OrderBtn}</div>
                 <div className="ViewBtn">{ViewBtn}</div>
-            </div>
+            </motion.div>
 
-            <div className="DownArrow">
+            <motion.div
+                className="DownArrow"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+            >
                 <i className="fa-solid fa-chevron-down"></i>
-            </div>
+            </motion.div>
+
         </div>
     )
 }
