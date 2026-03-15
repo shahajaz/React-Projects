@@ -8,12 +8,14 @@ import Testimonial from "./Sections/Testimonial";
 import Contact from "./Sections/Contact";
 import Footer from "./Layout/Footer";
 import ParticlesBackground from "./Components/ParticlesBackground";
+import CustomCursor from "./Components/CustomCursor";
 
 
 export default function App(){
   return(
-    <div>
+    <div className="bg-gradient-to-b from-black via-gray-900 to-black min-h-screen">
 
+      <CustomCursor/>
       <ParticlesBackground/>
 
 
