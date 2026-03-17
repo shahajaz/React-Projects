@@ -19,7 +19,7 @@ export default function ParticlesBackground() {
     }
 
     resizeCanvas();
-
+    
     class Particle {
       constructor() {
         this.x = Math.random() * canvas.width;
