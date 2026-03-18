@@ -11,7 +11,6 @@ export default function ParticlesBackground() {
 
     let particles = [];
     const particleCount = 50;
-    const colors = ["rgba(255,255,255,0.7)"];
 
     function resizeCanvas() {
       canvas.width = window.innerWidth;
@@ -25,7 +24,6 @@ export default function ParticlesBackground() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.radius = Math.random() * 2 + 1;
-        this.color = colors[0];
         this.speedX = (Math.random() - 0.5) * 0.5;
         this.speedY = (Math.random() - 0.5) * 0.5;
       }
@@ -33,9 +31,24 @@ export default function ParticlesBackground() {
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.shadowBlur = 10;
-        ctx.shadowColor = this.color;
-        ctx.fillStyle = this.color;
+
+        // ✅ Gradient per particle
+        const gradient = ctx.createLinearGradient(
+          this.x - 10,
+          this.y - 10,
+          this.x + 10,
+          this.y + 10
+        );
+
+        gradient.addColorStop(0, "#ff00af");
+        gradient.addColorStop(1, "#ffcc00");
+
+        ctx.fillStyle = gradient;
+
+        // glow effect
+        ctx.shadowBlur = 15;
+        ctx.shadowColor = "#ff00af";
+
         ctx.fill();
       }
 
