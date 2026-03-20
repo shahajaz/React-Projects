@@ -193,7 +193,7 @@ export default function Navbar(){
                 <motion.div
                   className="absolute inset-0 rounded-full 
                   bg-gradient-to-r from-[#ff00af] to-[#ffcc00] 
-                  border border-white/10 z-0"
+                  border border-yellow-400 z-0"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.25 }}
@@ -217,7 +217,7 @@ export default function Navbar(){
             bg-gradient-to-r from-[#ffcc00] to-[#ffcc00] inline-block"
           >
             <span
-              className="block px-3 py-2 rounded-full bg-gradient-to-r from-[#ff00af] to-[#ffcc00] text-white font-semibold 
+              className="block px-3 py-2 rounded-full bg-gradient-to-r from-[#ff00af] to-[#ffcc00] text-white font-bold 
               transition-all duration-300 
               group-hover:bg-gradient-to-r 
               group-hover:from-[#ffcc00] 
