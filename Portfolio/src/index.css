@@ -3,5 +3,10 @@
 @tailwind utilities;
 
 body{
-  font-family: "poppins", "roboto", sans-sarif;
+  font-family: "poppins", "roboto", sans-serif;
 }
+
+/* pink: #ff00af */
+/* yellow: #ffcc00 */
+/* third: #00bbbb; */
+/* color: #0000ff; */
