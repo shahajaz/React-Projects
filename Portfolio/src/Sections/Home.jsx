@@ -4,17 +4,13 @@ import ParticlesBackground from "../Components/ParticlesBackground";
 import FloatingIcons from "../Components/FloatingIcons";
 import {FaLinkedin, FaInstagram, FaGithub, FaGlobe, FaYoutube} from "react-icons/fa";
 import { SiUpwork } from "react-icons/si";
+import { SiLeetcode } from "react-icons/si";
 
 
 export default function Home() {
-const roles = useMemo(
-() => [
-"MERN Developer",
-"Full Stack AI Developer",
-"Tutor",
-"YouTuber",
-],
-[]
+  const roles = useMemo(() => [ 
+    "MERN Developer", "Full Stack AI Developer", "Tutor", "Content Creator",
+  ],[]
 );
 
 const [index, setIndex] = useState(0);
@@ -41,7 +37,8 @@ return () => clearTimeout(timeout);
 
 }, [subIndex, index, deleting, roles]);
 
-return ( <section id="home"
+
+return (<section id="home"
   className="w-full h-screen relative bg-black overflow-hidden">
     <ParticlesBackground />
     <FloatingIcons />
@@ -55,7 +52,11 @@ return ( <section id="home"
   </div> */}
 
   <div className="relative z-10 h-full w-full max-w-7xl mx-auto px-4 flex items-center">
-    <div className="text-center lg:text-left max-w-2xl">
+    <motion.div className="text-center lg:text-left max-w-2xl"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.6, duration: 0.8 }}
+    >
       
       <h1 className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mt-8 mb-2 leading-tight">
         <span className="mr-2">
@@ -75,7 +76,7 @@ return ( <section id="home"
         <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent mr-4">I'm a</span>
         
         <span className="text-white">{roles[index].substring(0, subIndex)}</span>
-        <span className="inline-block w-[2px] ml-1 bg-white animate-pulse h-5"></span>
+        <span className="inline-block w-[2px] ml-1 bg-white animate-pulse h-8"></span>
       </motion.div>
 
       <motion.p className="mt-1 text-base sm:text-lg md:text-xl text-white max-w-2xl mx-auto lg:mx-0"
@@ -88,27 +89,32 @@ return ( <section id="home"
       <div className="mt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
         
         <a href="#" target="_blank" rel="noopener noreferrer"
-          className="p-2 border-2 border-white/20 rounded-full transition-all duration-300 hover:-translate-y-2 hover:bg-[#00a6ff] group">
+          className="p-2 border-2 border-white/20 rounded-full transition-all duration-300 hover:-translate-y-2 hover:bg-[#00a6ff] group hover:shadow-[0_0_15px_#00a6ff]">
           <FaLinkedin className="text-white text-2xl" />
         </a>
         
         <a href="#" target="_blank" rel="noopener noreferrer"
-          className="p-2 border-2 border-white/20 rounded-full transition-all duration-300 hover:-translate-y-2 hover:bg-[#ff00af] group">
+          className="p-2 border-2 border-white/20 rounded-full transition-all duration-300 hover:-translate-y-2 hover:bg-[#ff00af] group hover:shadow-[0_0_15px_#ff00af]">
           <FaInstagram className="text-white text-2xl" />
         </a>
         
         <a href="#" target="_blank" rel="noopener noreferrer"
-          className="p-2 border-2 border-white/20 rounded-full transition-all duration-300 hover:-translate-y-2 hover:bg-[#363434] group">
+          className="p-2 border-2 border-white/20 rounded-full transition-all duration-300 hover:-translate-y-2 hover:bg-[#1c1c1c] group hover:shadow-[0_0_15px_#1c1c1c]">
           <FaGithub className="text-white text-2xl" />
         </a>
 
         <a href="#" target="_blank" rel="noopener noreferrer"
-          className="p-2 border-2 border-white/20 rounded-full transition-all duration-300 hover:-translate-y-2 hover:bg-[#00a7a7] group">
+          className="p-2 border-2 border-white/20 rounded-full transition-all duration-300 hover:-translate-y-2 hover:scale-110 hover:bg-[#FFA116] hover:shadow-[0_0_15px_#FFA116]">
+          <SiLeetcode className="text-white text-2xl" />
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          className="p-2 border-2 border-white/20 rounded-full transition-all duration-300 hover:-translate-y-2 hover:bg-[#00a7a7] group hover:shadow-[0_0_15px_#00a7a7]">
           <FaGlobe className="text-white text-2xl" />
         </a>
 
         <a href="#" target="_blank" rel="noopener noreferrer"
-          className="p-2 border-2 border-white/20 rounded-full transition-all duration-300 hover:-translate-y-2 hover:bg-[#FF0000] group">
+          className="p-2 border-2 border-white/20 rounded-full transition-all duration-300 hover:-translate-y-2 hover:bg-[#FF0000] group hover:shadow-[0_0_15px_#FF0000]">
           <FaYoutube className="text-white text-2xl" />
         </a>
 
@@ -119,14 +125,18 @@ return ( <section id="home"
       </div>
 
 
-      <div className="mt-4 flex gap-4 flex-wrap">
+      <motion.div className="mt-4 flex gap-4 flex-wrap"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.6, duration: 0.8 }}
+      >
         <a href="#" className="px-6 py-2 rounded-full font-semibold text-white 
           bg-gradient-to-r from-[#ff00af] to-[#ffcc00] 
           border-2 border-yellow-400
           transition-all duration-300
           hover:shadow-[0_0_20px_rgba(255,0,175,0.6)]"
           >
-            View Projects
+            View Resume
         </a>
         
         <a href="#" className="relative px-6 py-2 rounded-full font-semibold text-white
@@ -139,9 +149,18 @@ return ( <section id="home"
           >
             <span className="relative z-10">Hire Me</span>
         </a>
-      </div>
+      </motion.div>
 
-    </div>
+      <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.6, duration: 0.8 }}
+      >
+
+
+      </motion.div>
+
+    </motion.div>
   </div>
 </section>
 
