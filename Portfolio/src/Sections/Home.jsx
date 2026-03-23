@@ -5,6 +5,10 @@ import FloatingIcons from "../Components/FloatingIcons";
 import {FaLinkedin, FaInstagram, FaGithub, FaGlobe, FaYoutube} from "react-icons/fa";
 import { SiUpwork } from "react-icons/si";
 import { SiLeetcode } from "react-icons/si";
+import OrbitIcon from "../Components/OrbitIcon";
+
+import {FaReact, FaNodeJs, FaJs, FaPython,} from "react-icons/fa";
+import { SiMongodb, SiOpenai } from "react-icons/si";
 
 
 export default function Home() {
@@ -125,7 +129,7 @@ return (<section id="home"
       </div>
 
 
-      <motion.div className="mt-4 flex gap-4 flex-wrap"
+      <motion.div className="mt-4 flex gap-4 flex-wrap justify-center lg:justify-start"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.6, duration: 0.8 }}
@@ -151,18 +155,63 @@ return (<section id="home"
         </a>
       </motion.div>
 
-      <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.6, duration: 0.8 }}
-      >
-
-
-      </motion.div>
-
     </motion.div>
+
+    <div className="hidden lg:flex w-1/2 justify-center items-center">
+
+  <div className="relative w-[320px] h-[320px]">
+
+    {/* 🔥 CENTER CIRCLE */}
+    <div className="absolute inset-0 flex items-center justify-center z-20">
+      <div className="w-16 h-16 rounded-full 
+      bg-gradient-to-r from-[#ff00af] to-[#ffcc00] 
+      shadow-[0_0_30px_#ff00af] 
+      flex items-center justify-center text-white text-2xl animate-spin-slow">
+        🌐
+      </div>
+    </div>
+
+    {/* 🟣 OUTER RING */}
+    <div className="absolute inset-0 rounded-full border border-white/10 animate-spin-slow">
+
+      <div className="absolute top-0 left-1/2 -translate-x-1/2">
+        <OrbitIcon><FaReact /></OrbitIcon>
+      </div>
+
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
+        <OrbitIcon><FaNodeJs /></OrbitIcon>
+      </div>
+
+      <div className="absolute left-0 top-1/2 -translate-y-1/2">
+        <OrbitIcon><FaJs /></OrbitIcon>
+      </div>
+
+      <div className="absolute right-0 top-1/2 -translate-y-1/2">
+        <OrbitIcon><FaPython /></OrbitIcon>
+      </div>
+
+    </div>
+
+    {/* 🔁 INNER RING */}
+    <div className="absolute inset-[50px] rounded-full border border-white/10 animate-spin-reverse">
+
+      <div className="absolute top-0 left-1/2 -translate-x-1/2">
+        <OrbitIcon><SiMongodb /></OrbitIcon>
+      </div>
+
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
+        <OrbitIcon><SiOpenai /></OrbitIcon>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
   </div>
 </section>
 
-);
+)
 }
