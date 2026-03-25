@@ -15,8 +15,10 @@ export default function App(){
   return(
     <div className="bg-gradient-to-b from-black via-gray-900 to-black min-h-screen">
 
-      <CustomCursor/>
-      <ParticlesBackground/>
+      {/* <CustomCursor/>
+      <ParticlesBackground/> */}
+      <CustomCursor className="pointer-events-none"/>
+<ParticlesBackground className="pointer-events-none"/>
 
 
       <Navbar/>

@@ -62,7 +62,7 @@ return (<section id="home"
       transition={{ delay: 0.6, duration: 0.8 }}
     >
       
-      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 
+      <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 
           font-bold text-white t-12 sm:mt-16 lg:mt-8 mb-2 leading-tight break-words">
           <span className="mr-2">
             Hey, It's
@@ -133,9 +133,8 @@ return (<section id="home"
       >
         <a href="#" className="px-6 py-2 rounded-full font-semibold text-white 
           bg-gradient-to-r from-[#ff00af] to-[#ffcc00] 
-          border-2 border-yellow-400
-          transition-all duration-300
-          hover:shadow-[0_0_20px_rgba(255,0,175,0.6)]"
+          border-2 border-yellow-400 transition-all duration-300
+          hover:shadow-[0_0_20px_rgba(255,0,175,0.6)] hover:scale-105"
           >
             View Resume
         </a>
