@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { FaChevronRight } from "react-icons/fa";
+import { useEffect } from "react";
 
 // ✅ Import Images (example paths – adjust as per your assets folder)
 // import reactImg from "../assets/react.png";
@@ -33,6 +35,29 @@ import cImg from "../assets/C.png";
 export default function Skills() {
   const [active, setActive] = useState("All");
 
+  const [selectedSkill, setSelectedSkill] = useState(null);
+const [progress, setProgress] = useState(0);
+const [hoveredSkill, setHoveredSkill] = useState(null);
+
+  useEffect(() => {
+  let interval;
+
+  if (hoveredSkill) {
+    interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          setSelectedSkill(hoveredSkill); // ✅ open modal
+          return 100;
+        }
+        return prev + 5;
+      });
+    }, 50); // speed control
+  }
+
+  return () => clearInterval(interval);
+}, [hoveredSkill]);
+
   // ✅ Added Languages Button
   const buttons = ["All", "Languages", "Frontend", "Backend", "Tools/Others"];
 
@@ -40,7 +65,7 @@ export default function Skills() {
   const skillsData = {
     Languages: [
       { name: "C", img: cImg },
-     /*  { name: "Java", img: javaImg },
+      /*  { name: "Java", img: javaImg },
       { name: "Python", img: pythonImg },
       { name: "SQL", img: sqlImg },
       { name: "JavaScript", img: jsImg },
@@ -93,8 +118,7 @@ export default function Skills() {
   ];
 
   return (
-    <section
-      id="skills" className="min-h-[120vh] flex flex-col items-center pt-20 md:pt-24 relative text-white px-6 overflow-hidden">
+    <section id="skills" className="min-h-[120vh] flex flex-col items-center pt-20 md:pt-24 relative text-white px-6 overflow-hidden scroll-mt-24">
       {/* Glow */}
       {glows.map((c, i) => (
         <div
@@ -110,18 +134,34 @@ export default function Skills() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-semibold">
-          <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent">
-            Technical Skills
-          </span>
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-semibold px-6 py-3 rounded-full 
+          bg-black/80 backdrop-blur-md relative inline-block mx-auto">
+            <span className="absolute inset-0 rounded-full p-[2px] bg-gradient-to-r from-[#ff00af] to-[#ffcc00] -z-10">
+              <span className="block w-full h-full rounded-full bg-black"></span>
+            </span>
+            <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent">Skills</span>
+          </h2>
+
+        <p className="mt-4 text-gray-400 max-w-3xl mx-auto text-base md:text-lg lg:text-xl leading-relaxed">
+          A comprehensive overview of my{" "}
+          <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent font-semibold">
+            technical expertise
+          </span>{" "}
+          across diverse domains, showcasing my ability to{" "}
+          <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent font-semibold">
+            design, develop
+          </span>{" "}
+          and deliver{" "}
+          <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent font-semibold">
+            scalable solutions
+          </span>.
+        </p>
       </motion.div>
 
       {/* Buttons */}
       <motion.div className="flex flex-wrap gap-4 mb-8"
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-      >
+        whileInView={{ opacity: 1, y: 0 }}>
         
         {buttons.map((btn) => {
           const isActive = active === btn;
@@ -133,17 +173,14 @@ export default function Skills() {
               whileHover={{ y: -3 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className={`px-5 py-2 rounded-full border-2 transition-all duration-300
-              ${
-              isActive
-            ? "bg-gradient-to-r from-[#ff00af] to-[#ffcc00] text-black font-semibold border-transparent"
-            : "border-white/20 text-white bg-transparent"
-        }`}
-      >
-        {btn}
-      </motion.button>
-    );
-  })}
-</motion.div>
+              ${isActive
+              ? "bg-gradient-to-r from-[#ff00af] to-[#ffcc00] text-black font-semibold border-transparent"
+              : "border-white/20 text-white bg-transparent"}`}>
+                {btn}
+            </motion.button>
+            );
+            })}
+      </motion.div>
 
       {/* Container */}
       <div className="w-full max-w-7xl rounded-2xl border border-purple-500/30 p-8 bg-[#070d18]">
@@ -160,28 +197,10 @@ export default function Skills() {
         </h2>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-          {filteredSkills.map((skill, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ y: -4 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="flex items-center gap-3 px-4 py-3 rounded-xl border border-purple-500/20 bg-[#0a0512] hover:border-purple-400/40"
-            >
-              {/* ✅ Image instead of icon */}
-              <img
-                src={skill.img}
-                alt={skill.name}
-                className="w-8 h-8 object-contain"
-              />
+        
 
-              {/* Name */}
-              <span className="text-gray-200 font-medium">
-                {skill.name}
-              </span>
-            </motion.div>
-          ))}
-        </div>
+
+
       </div>
     </section>
   );

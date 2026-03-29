@@ -38,7 +38,7 @@ export default function About() {
             Creating <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent font-semibold">digital experiences</span> that inspire, 
             building <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent font-semibold">scalable solutions</span>, 
             and turning ideas into <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent font-semibold">impactful products</span>.
-            </p>
+          </p>
       </motion.div>
       
       {/* MAIN CONTENT */}
