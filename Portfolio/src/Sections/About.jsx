@@ -107,7 +107,7 @@ export default function About() {
           </div>
           
           {/* BUTTONS */}
-          <motion.div className="mt-4 flex gap-4 flex-wrap justify-center lg:justify-start"
+          <motion.div className="mt-4 mb-6 flex flex-wrap gap-4 justify-center md:justify-start"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}

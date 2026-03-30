@@ -42,8 +42,7 @@ return () => clearTimeout(timeout);
 }, [subIndex, index, deleting, roles]);
 
 
-return (<section id="home"
-  className="w-full h-screen relative bg-black overflow-hidden">
+return (<section id="home" className="w-full h-screen relative bg-black overflow-hidden">
     <ParticlesBackground />
     <FloatingIcons />
 
@@ -55,7 +54,7 @@ return (<section id="home"
     <div className="absolute bottom-0 right-0 w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 opacity-20 blur-[120px] animate-pulse delay-500"></div>
   </div> */}
 
-  <div className="relative z-10 h-full w-full max-w-7xl mx-auto px-4 flex items-center">
+  <div className="relative z-10 h-full w-full max-w-7xl mx-auto px-2 flex items-center">
     <motion.div className="text-center lg:text-left max-w-2xl mt-20 sm:mt-24 lg:mt-0 lg:ml-10 xl:ml-16"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -63,7 +62,7 @@ return (<section id="home"
     >
       
       <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 
-          font-bold text-white t-12 sm:mt-16 lg:mt-8 mb-2 leading-tight break-words">
+          font-bold text-white t-12 sm:mt-8 lg:mt-8 mb-2 leading-tight break-words">
           <span className="mr-2">
             Hey, It's
           </span>

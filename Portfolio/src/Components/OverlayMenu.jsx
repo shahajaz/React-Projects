@@ -50,45 +50,52 @@ export default function OverlayMenu({ isOpen, onClose }) {
 
           </div>
 
-
           <motion.div
-            className="flex flex-col items-center justify-center flex-1 gap-5 text-lg font-semibold"
-            initial={{ y: 40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 40, opacity: 0 }}
-            transition={{ duration: 0.4 }}
-          >
+  className="flex flex-col items-center justify-center flex-1 gap-5 text-lg font-semibold"
+  initial={{ y: 40, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  exit={{ y: 40, opacity: 0 }}
+  transition={{ duration: 0.4 }}
+>
 
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => {
-                  setActive(item.id);
-                  onClose();
-                }}
-                className="relative px-4 py-2 rounded-full"
-              >
+  {navItems.map((item) => (
+    <button
+      key={item.id}
+      onClick={() => {
+        setActive(item.id);
 
-                {active === item.id && (
-                  
-                  <motion.div className="absolute inset-0 rounded-full 
-                    bg-gradient-to-r from-[#ff00af] to-[#ffcc00] 
-                    border border-white/20 z-0"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.25 }}
-                  />
-                )}
+        const section = document.getElementById(item.id);
 
-                <span className={`relative z-10 ${
-                  active === item.id ? "text-white" : "text-white"
-                }`}>
-                  {item.name}
-                </span>
+        onClose();
 
-              </button>
-              ))}
-            </motion.div>
+        setTimeout(() => {
+          section?.scrollIntoView({ behavior: "smooth" });
+        }, 200);
+      }}
+      className="relative px-4 py-2 rounded-full"
+    >
+
+      {active === item.id && (
+        <motion.div
+          className="absolute inset-0 rounded-full 
+          bg-gradient-to-r from-[#ff00af] to-[#ffcc00] 
+          border border-white/20 z-0"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.25 }}
+        />
+      )}
+
+      <span className={`relative z-10 ${
+        active === item.id ? "text-white" : "text-white"
+      }`}>
+        {item.name}
+      </span>
+
+    </button>
+  ))}
+</motion.div>
+          
             
           </motion.div>
         )}

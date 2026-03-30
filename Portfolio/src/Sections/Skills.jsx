@@ -159,40 +159,40 @@ const [hoveredSkill, setHoveredSkill] = useState(null);
       </motion.div>
 
       {/* Buttons */}
-      <motion.div className="flex flex-wrap gap-4 mb-8"
+      <motion.div className="grid grid-cols-5 gap-3 mb-8"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}>
-        
+  
         {buttons.map((btn) => {
-          const isActive = active === btn;
-          
-          return (
-            <motion.button key={btn}
-              onClick={() => setActive(btn)}
-              whileTap={{ scale: 0.96 }}
-              whileHover={{ y: -3 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className={`px-5 py-2 rounded-full border-2 transition-all duration-300
-              ${isActive
-              ? "bg-gradient-to-r from-[#ff00af] to-[#ffcc00] text-black font-semibold border-transparent"
-              : "border-white/20 text-white bg-transparent"}`}>
-                {btn}
-            </motion.button>
-            );
-            })}
+        const isActive = active === btn;
+
+        return (
+        <motion.button
+          key={btn} onClick={() => setActive(btn)} whileTap={{ scale: 0.96 }}
+          whileHover={{ y: -3 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          className={`w-full text-xs px-2 py-2 rounded-full border-2 transition-all duration-300
+          ${isActive
+            ? "bg-gradient-to-r from-[#ff00af] to-[#ffcc00] text-black text-xs font-semibold border-transparent"
+            : "border-white/20 text-white bg-transparent"
+            }`}
+          >
+          {btn}
+        </motion.button>
+        ); })}
       </motion.div>
 
       {/* Container */}
-      <div className="w-full max-w-7xl rounded-2xl border border-purple-500/30 p-8 bg-[#070d18]">
+      <div className="w-full max-w-7xl rounded-2xl border border-purple-500/30 p-4 bg-[#070d18]">
 
         {/* Dynamic Heading */}
-        <h2 className="text-2xl font-semibold mb-6 inline-block">
-          <span className={`px-4 py-1 rounded-full
-            ${active
-              ? "bg-gradient-to-r from-[#ff00af] to-[#ffcc00] text-white font-semibold"
-              : "bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent"
-            }`}>
-            {active}
+        <h2 className="text-xl font-medium mb-1 inline-block">
+          <span className={`px-4 py-1 rounded-full 
+          ${active
+            ? "bg-gradient-to-r from-[#ff00af] to-[#ffcc00] text-white font-medium"
+            : "bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent"
+          }`}>
+          {active}
           </span>
         </h2>
 
