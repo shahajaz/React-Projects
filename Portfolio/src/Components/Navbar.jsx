@@ -61,8 +61,7 @@ export default function Navbar() {
         </a>
 
         {/* DESKTOP NAV */}
-        <div className="hidden lg:flex items-center bg-black px-2 py-2 rounded-full gap-2 border-[3px] border-white/15">
-
+        <div className="hidden lg:flex items-center bg-black px-4 py-2 rounded-full gap-2 border-[2px] border-white/20">
           {navItems.map((item) => (
             <a
               key={item.id}
@@ -74,7 +73,7 @@ export default function Navbar() {
                 const section = document.getElementById(item.id);
                 section?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="relative px-4 py-2 text-xl font-bold"
+              className="relative px-4 py-2 text-xl font-semibold"
             >
 
               {/* ACTIVE BACKGROUND */}
@@ -84,7 +83,7 @@ export default function Navbar() {
                   className="absolute inset-0 rounded-full 
                   bg-gradient-to-r from-[#ff00af] to-[#ffcc00] 
                   border border-yellow-400 z-0"
-                  transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 25}}
                 />
               )}
 
@@ -94,7 +93,6 @@ export default function Navbar() {
 
             </a>
           ))}
-
         </div>
 
         {/* CTA BUTTON */}

@@ -7,69 +7,69 @@ import image3 from "../assets/img3.jpg";
 
 const projects = [
   {
-    title: "Personal Portfolio (v1)",
-    image: image,
-    tools: ["HTML5", "CSS3", "JavaScript"],
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
     title: "Vehicle Rental System",
     image: image3,
     tools: ["HTML5", "CSS3", "JavaScript"],
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
-    title: "E-Commerce Application",
-    image: image3,
-    tools: ["React.js", "TailwindCSS", "Context API", "Redux Toolkit", "Firebase"],
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "E-Commerce Application",
-    image: image3,
-    tools: ["React.js", "TailwindCSS", "Context API", "Redux Toolkit", "Firebase"],
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "E-Commerce Application",
-    image: image3,
-    tools: ["React.js", "TailwindCSS", "Context API", "Redux Toolkit", "Firebase"],
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "E-Commerce Application",
-    image: image3,
-    tools: ["React.js", "TailwindCSS", "Context API", "Redux Toolkit", "Firebase"],
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "E-Commerce Application",
-    image: image3,
-    tools: ["React.js", "TailwindCSS", "Context API", "Redux Toolkit", "Firebase"],
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "E-Commerce Application",
-    image: image3,
-    tools: ["React.js", "TailwindCSS", "Context API", "Redux Toolkit", "Firebase"],
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "E-Commerce Application",
-    image: image3,
-    tools: ["React.js", "TailwindCSS", "Context API", "Redux Toolkit", "Firebase"],
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "E-Commerce Application",
-    image: image3,
-    tools: ["React.js", "TailwindCSS", "Context API", "Redux Toolkit", "Firebase"],
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "E-Commerce Website",
+    title: "Personal Portfolio",
     image: image,
-    tools: ["React", "Node", "MongoDB"],
+    tools: ["React.js", "TailwindCSS", "Framer Motion"],
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    title: "E-Commerce Application",
+    image: image3,
+    tools: ["React.js", "Next.js", "TailwindCSS", "Node.js", "Express.js", "MongoDB", "AWS"],
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    title: "Learning Platform Application",
+    image: image3,
+    tools: ["React.js", "Next.js", "TailwindCSS", "Node.js", "Express.js", "MongoDB",],
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    title: "Property Platform Application",
+    image: image3,
+    tools: ["React.js", "Next.js", "TailwindCSS", "MongoDB", "AWS"],
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    title: "Doctor Appointment Booking App",
+    image: image3,
+    tools: ["React.js", "TailwindCSS", "Next.js", "Node.js", "Express.js", "MongoDB"],
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    title: "AI Finance Platform",
+    image: image3,
+    tools: ["React.js", "TailwindCSS", "Context API", "Redux Toolkit", "Firebase"],
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    title: "Real-time Social Application",
+    image: image3,
+    tools: ["React.js", "TailwindCSS", "Node.js", "Express.js", "MongoDB", "Socket.io"],
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    title: "Logistics Management Platform",
+    image: image3,
+    tools: ["React.js", "Next.js", "TailwindCSS", "GoLang", "GraphQL", "PostgreSQL"],
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    title: "AI Codebase Intelligence & Developer Copilot",
+    image: image3,
+    tools: ["React.js", "TailwindCSS", "Context API", "Redux Toolkit", "Firebase"],
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    title: "AI Resume & Job Matching Platform",
+    image: image,
+    tools: ["React.js", "Next.js", "Node.js", "MongoDB"],
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   }
 ];
@@ -115,10 +115,9 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div key={index}
             className="group relative max-w-sm mx-auto rounded-xl p-[1px] 
-            bg-gradient-to-r from-[#ff00af] to-[#ffcc00] transition-all duration-500 hover:shadow-[0_0_40px_rgba(255,0,175,0.4)]">
+            bg-gradient-to-b from-[#ff00af] to-[#ffcc00] transition-all duration-500 hover:shadow-[0_0_40px_rgba(255,0,175,0.5)]">
             
             <div className="bg-black/90 backdrop-blur-xl rounded-2xl overflow-hidden flex flex-col h-full">
-
 
               {/* Image */}
               <div className="h-56 md:h-64 lg:h-72 overflow-hidden relative group/image">
@@ -140,7 +139,7 @@ export default function Projects() {
                 <div className="grid grid-cols-4 gap-2 w-full">
                   {project.tools.map((tech, i) => (
                     <span key={i} className="flex items-center justify-center px-2 py-1 text-[11px] 
-                      rounded-full bg-white/5 border border-white/10 text-gray-200 
+                      rounded-full bg-black border border-white/30 text-gray-200 
                       backdrop-blur-md hover:border-pink-500 transition 
                       text-center whitespace-nowrap overflow-hidden text-ellipsis">
                       {tech}
