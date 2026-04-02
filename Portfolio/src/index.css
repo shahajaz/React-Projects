@@ -6,7 +6,18 @@ body{
   font-family: "poppins", "roboto", sans-serif;
 }
 
-/* pink: #ff00af */
-/* yellow: #ffcc00 */
-/* third: #00bbbb; */
-/* color: #0000ff; */
+.custom-dot {
+  width: 8px;
+  height: 8px;
+  background: #555;
+  border-radius: 999px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active.custom-dot {
+  width: 22px;
+  background: linear-gradient(to right, #ff00af, #ffcc00);
+  opacity: 1;
+}
