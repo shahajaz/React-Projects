@@ -148,11 +148,11 @@ const Contact = () => {
 
               {/* Social Icons */}
               <motion.div variants={fadeUp}>
-                <p className="text-gray-400 font-semibold mb-4">Connect with me:</p>
+                <p className="text-gray-400 font-semibold mb-2">Connect with me:</p>
                 <div className="flex items-center gap-4">
                   
                   {[
-                    { Icon: FaLinkedin, link: "https://www.google.com/", color: "#00a6ff" },
+                    { Icon: FaLinkedin, link: "https://www.google.com/", color:"#00a6ff"},
                     { Icon: FaInstagram, link: "#", color: "#ff00af" },
                     { Icon: HiOutlineMail, link: "mailto:your-email@example.com", color: "#ffc000" },
                     { Icon: FaGithub, link: "#", color: "" },
@@ -227,7 +227,7 @@ const Contact = () => {
                       {/* Message */}
                       <motion.textarea
                         variants={fadeUp}
-                        name="message" placeholder="Message" rows="4"
+                        name="message" placeholder="Message" rows="6"
                         className="w-full bg-transparent border border-pink-500 rounded-xl px-4 py-2 text-white focus:outline-none focus:border-yellow-400 focus:shadow-[0_0_8px_#ffcc00]"
                         whileFocus={{ scale: 1.02 }}
                       />
@@ -237,7 +237,7 @@ const Contact = () => {
                         variants={fadeUp}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        type="submit" className="w-full bg-gradient-to-r from-[#ff00af] to-[#ffcc00] text-white py-2 rounded-full font-semibold shadow-lg hover:shadow-[0_0_15px_#ff00af] flex items-center justify-center gap-2">
+                        type="submit" className="w-full bg-gradient-to-r from-[#ff00af] to-[#ffcc00] text-white py-2 rounded-full font-semibold shadow-lg hover:shadow-[0_0_15px_#ff00af] flex items-center justify-center gap-4">
                           Submit
                         <IoIosSend className="text-lg" />
                       </motion.button>
