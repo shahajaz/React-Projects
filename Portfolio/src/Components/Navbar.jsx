@@ -51,10 +51,8 @@ export default function Navbar() {
         {/* LOGO */}
         <a href="#home" className="flex items-center gap-1 cursor-pointer">
           <img
-            src={Logo}
-            alt="logo"
-            className="w-14 h-14 object-contain transition-all duration-300 hover:scale-110"
-          />
+            src={Logo} alt="logo"
+            className="w-14 h-14 object-contain transition-all duration-300 hover:scale-110"/>
           <span className="text-4xl font-bold bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent">
             Ajaz
           </span>
@@ -73,8 +71,7 @@ export default function Navbar() {
                 const section = document.getElementById(item.id);
                 section?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="relative px-4 py-2 text-xl font-semibold"
-            >
+              className="relative px-4 py-2 text-xl font-semibold">
 
               {/* ACTIVE BACKGROUND */}
               {active === item.id && (
@@ -118,7 +115,7 @@ export default function Navbar() {
         <div className="lg:hidden">
           <button
             onClick={() => setMenuOpen(true)}
-            className="flex items-center justify-center w-10 h-10 text-white text-3xl 
+            className="flex items-center justify-center w-10 h-10 text-white text-2xl 
             rounded-full bg-black border-2 border-white/20
             transition-all duration-300 hover:bg-white/10"
           >

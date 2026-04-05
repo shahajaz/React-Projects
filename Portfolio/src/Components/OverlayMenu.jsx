@@ -40,10 +40,8 @@ export default function OverlayMenu({ isOpen, onClose }) {
             <div className="p-[2px] rounded-full bg-transparent 
               hover:bg-transparent transition-all duration-300">
                 
-                <button onClick={onClose} className="flex items-center justify-center w-10 h-10 
-                text-white text-3xl rounded-full 
-                bg-black border-2 border-white/10 transition-all duration-300 
-                hover:bg-white/10 hover:scale-110">
+                <button onClick={onClose} className="flex items-center justify-center w-10 h-10 text-white text-3xl rounded-full bg-white/5 border border-white/10 
+                  transition-all duration-300 hover:bg-white/10 hover:scale-110">
                   <MdClose />
                 </button> 
             </div>

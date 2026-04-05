@@ -126,7 +126,7 @@ export default function Skills() {
       </motion.div>
 
       {/* Buttons */}
-      <motion.div className="grid grid-cols-5 gap-3 mb-6 max-w-3xl mx-auto"
+      <motion.div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-2 mb-6 max-w-5xl mx-auto justify-items-center"
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: false, amount: 0.3 }}
@@ -163,7 +163,7 @@ export default function Skills() {
         </div>
 
         {/* Grid */}
-        <motion.div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"
+        <motion.div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: false, amount: 0.3 }}
@@ -173,7 +173,7 @@ export default function Skills() {
               key={i}
               onMouseEnter={() => {
                 setLoadingIndex(i);
-                setProgress(0);
+                setProgress();
 
                 let value = 0;
 

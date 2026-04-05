@@ -40,8 +40,8 @@ const Testimonials = ({ data = testimonialsData }) => {
   if (!data || data.length === 0) return null;
 
   return (
-    <section
-      id="testimonials" className="min-h-[120vh] flex flex-col items-center pt-20 md:pt-24 pb-20 md:pb-24 relative text-white bg-black px-6 overflow-hidden scroll-mt-24">
+    <section id="testimonials" className="min-h-fit md:min-h-[120vh] flex flex-col items-center 
+pt-20 md:pt-24 pb-16 md:pb-24 relative text-white bg-black px-6 overflow-hidden scroll-mt-24">
       {/* Heading */}
       <motion.div className="mb-10 text-center"
         initial={{ opacity: 0, scale: 0.9 }}

@@ -61,15 +61,12 @@ return (<section id="home" className="w-full h-screen relative bg-black overflow
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.6, ease: "easeOut" }}>
       
-      <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 
-          font-bold text-white t-12 sm:mt-8 lg:mt-8 mb-2 leading-tight break-words">
-          <span className="mr-2">
-            Hey, It's
-          </span>
+      <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-bold text-white mt-10 sm:mt-4 lg:mt-8 mb-2 leading-tight break-words">
+          <span className="mr-2">Hey, It's</span>
           <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent">Ajaz</span>
       </h1>
       
-      <motion.div className="mt-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-wide min-h-[1.6em]"
+      <motion.div className="mt-6 text-[clamp(1.5rem,4vw,2.5rem)] font-semibold tracking-wide min-h-[1.6em]"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: false, amount: 0.3 }}
@@ -88,7 +85,7 @@ return (<section id="home" className="w-full h-screen relative bg-black overflow
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo at sapiente porro sunt illo sed ducimus est vitae fuga.
       </motion.p>
 
-      <div className="mt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
+      <div className="mt-4 flex flex-nowrap gap-2 sm:gap-3 md:gap-4 xl:gap-6 justify-center lg:justify-start">
         <a href="#" target="_blank" rel="noopener noreferrer"
           className="p-2 border-2 border-white/20 rounded-full transition-all duration-300 hover:-translate-y-2 hover:bg-[#00a6ff] group hover:shadow-[0_0_15px_#00a6ff]">
           <FaLinkedin className="text-white text-2xl" />
