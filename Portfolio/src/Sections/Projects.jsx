@@ -78,11 +78,11 @@ export default function Projects() {
   return (
     <section id="projects" className="min-h-[120vh] flex flex-col items-center pt-20 md:pt-24 pb-20 md:pb-24 relative text-white bg-black px-6 overflow-hidden scroll-mt-24">
       {/* Heading */}
-      <motion.div
-        className="mb-4 text-center"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}>
+      <motion.div className="mb-4 text-center"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}>
         
         <h2 className="text-3xl md:text-4xl font-semibold px-6 py-3 rounded-full bg-black/80 backdrop-blur-md relative inline-block mx-auto">
           <span className="absolute inset-0 rounded-full p-[2px] bg-gradient-to-r from-[#ff00af] to-[#ffcc00] -z-10">
@@ -112,12 +112,17 @@ export default function Projects() {
 
       {/* ProjectsCard */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-6 md:gap-y-8 items-stretch">
+
         {projects.map((project, index) => (
           <div key={index}
             className="group relative max-w-sm mx-auto rounded-xl p-[1px] 
             bg-gradient-to-b from-[#ff00af] to-[#ffcc00] transition-all duration-500 hover:shadow-[0_0_40px_rgba(255,0,175,0.5)]">
             
-            <div className="bg-black/90 backdrop-blur-xl rounded-2xl overflow-hidden flex flex-col h-full">
+            <motion.div className="bg-black/90 backdrop-blur-xl rounded-2xl overflow-hidden flex flex-col h-full"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}>
 
               {/* Image */}
               <div className="h-56 md:h-64 lg:h-72 overflow-hidden relative group/image">
@@ -132,14 +137,14 @@ export default function Projects() {
 
               {/* Content */}
               <div className="p-5 space-y-4 flex flex-col flex-1">
-                <h3 className="text-xl font-semibold text-white tracking-wide">
+                <h3 className="text-xl font-semibold text-[#ffcc00] tracking-wide">
                   {project.title}
                 </h3>
 
                 <div className="grid grid-cols-4 gap-2 w-full">
                   {project.tools.map((tech, i) => (
                     <span key={i} className="flex items-center justify-center px-2 py-1 text-[11px] 
-                      rounded-full bg-black border border-white/30 text-gray-200 
+                      rounded-full bg-[#ff00af]/10 text-[#ffcc00] border border-[#ff00af]/30 
                       backdrop-blur-md hover:border-pink-500 transition 
                       text-center whitespace-nowrap overflow-hidden text-ellipsis">
                       {tech}
@@ -178,7 +183,7 @@ export default function Projects() {
 
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>

@@ -33,8 +33,8 @@ const Contact = () => {
       <motion.div className="mb-4 text-center"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}>
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut"}}>
         
         <h2 className="text-3xl md:text-4xl font-semibold px-6 py-3 rounded-full bg-black/80 backdrop-blur-md relative inline-block mx-auto">
           <span className="absolute inset-0 rounded-full p-[2px] bg-gradient-to-r from-[#ff00af] to-[#ffcc00] -z-10">
@@ -66,8 +66,8 @@ const Contact = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut"}}
         className="bg-gradient-to-b from-[#ff00af] to-[#ffcc00] p-[2px] rounded-2xl w-full max-w-6xl">
         
         {/* Inner Container */}
@@ -79,8 +79,7 @@ const Contact = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] p-[2px] rounded-xl"
-          >
+            className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] p-[2px] rounded-xl">
             <div className="bg-[#0a0a0a] rounded-xl p-6 h-full flex flex-col justify-between relative overflow-hidden">
 
               {/* Heading */}

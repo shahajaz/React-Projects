@@ -43,10 +43,11 @@ const Testimonials = ({ data = testimonialsData }) => {
     <section
       id="testimonials" className="min-h-[120vh] flex flex-col items-center pt-20 md:pt-24 pb-20 md:pb-24 relative text-white bg-black px-6 overflow-hidden scroll-mt-24">
       {/* Heading */}
-      <motion.div
-        className="mb-10 text-center"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}>
+      <motion.div className="mb-10 text-center"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}>
 
         <h2 className="text-3xl md:text-4xl font-semibold px-6 py-3 rounded-full bg-black/80 backdrop-blur-md relative inline-block mx-auto">
           <span className="absolute inset-0 rounded-full p-[2px] bg-gradient-to-r from-[#ff00af] to-[#ffcc00] -z-10">
@@ -73,7 +74,11 @@ const Testimonials = ({ data = testimonialsData }) => {
         </p>
       </motion.div>
 
-      <div className="w-full max-w-6xl">
+      <motion.div className="w-full max-w-6xl"
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}>
         <Swiper modules={[Autoplay, Pagination, Navigation]}
           spaceBetween={30}
           slidesPerView={1}
@@ -101,7 +106,7 @@ const Testimonials = ({ data = testimonialsData }) => {
           {data.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="p-[1.5px] rounded-xl bg-gradient-to-r from-[#ff00af] to-[#ffcc00]">
-                <div className="rounded-2xl bg-[#111] p-6 h-full border border-white/5">
+                <div className="rounded-2xl bg-[#111] p-6 h-full border border-white/5 ">
 
                   <div className="text-4xl mb-4 text-pink-500">“</div>
 
@@ -131,7 +136,11 @@ const Testimonials = ({ data = testimonialsData }) => {
         </Swiper>
 
         {/* Controls */}
-        <div className="flex items-center justify-center gap-6 mt-10">
+        <motion.div className="flex items-center justify-center gap-6 mt-10"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}>
 
           {/* Prev */}
           <div className="p-[1.5px] rounded-full bg-gradient-to-r from-[#ff00af] to-[#ffcc00]">
@@ -150,9 +159,9 @@ const Testimonials = ({ data = testimonialsData }) => {
             </button>
           </div>
 
-        </div>
+        </motion.div>
 
-      </div>
+      </motion.div>
     </section>
   );
 };

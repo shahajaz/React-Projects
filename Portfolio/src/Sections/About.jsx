@@ -21,9 +21,11 @@ export default function About() {
       
       {/* Heading */}
       <motion.div className="relative z-10 mb-8 text-center w-full"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}>
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}>
+          
           <h2 className="text-3xl md:text-4xl font-semibold px-6 py-3 rounded-full 
           bg-black/80 backdrop-blur-md relative inline-block mx-auto">
             
@@ -45,9 +47,10 @@ export default function About() {
       <div className="relative z-10 max-w-5xl mx-auto w-full grid md:grid-cols-[320px,1fr] gap-4 items-center">
         
         <motion.div className="flex justify-center md:justify-start"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}>
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}>
             
             <div className="relative w-[300px] h-[300px] group">
               <div className="absolute inset-0 rounded-xl z-30 pointer-events-none
@@ -68,9 +71,10 @@ export default function About() {
         
         {/* RIGHT CONTENT */}
         <motion.div className="text-center md:text-left"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6, duration: 0.8 }}>
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}>
           
           <h2 className="text-3xl md:text-4xl lg:text-3xl font-bold mb-3 whitespace-nowrap">
             <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent">Mohammad Ajaz Shah</span>
@@ -108,10 +112,10 @@ export default function About() {
           
           {/* BUTTONS */}
           <motion.div className="mt-4 mb-6 flex flex-wrap gap-4 justify-center md:justify-start"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-          >
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}>
             <a href="#" className="px-6 py-2 rounded-full font-semibold text-white 
               bg-gradient-to-r from-[#ff00af] to-[#ffcc00] border-2 border-yellow-400 transition-all duration-300
               hover:shadow-[0_0_20px_rgba(255,0,175,0.6)] hover:scale-105">

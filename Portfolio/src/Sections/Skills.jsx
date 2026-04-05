@@ -7,6 +7,31 @@ import c from "../assets/C.png";
 import java from "../assets/java.png";
 import python from "../assets/python.png";
 import JavaScript from "../assets/js.png";
+import SQL from "../assets/sql.png";
+
+import react from "../assets/react.png";
+import html from "../assets/html.png";
+import next from "../assets/next.png";
+import bootstrap from "../assets/bootstrap.png";
+import typescript from "../assets/typescript.png";
+import tailwind from "../assets/tailwind.png";
+
+import node from "../assets/node.png";
+import express from "../assets/express.png";
+import mongodb from "../assets/mongodb.png";
+import go from "../assets/golang.png";
+
+import Git from "../assets/git.png";
+import Docker from "../assets/docker.png";
+import aws from "../assets/aws.png";
+import kubernetes from "../assets/kubernetes.png";
+import cicd from "../assets/cicd.png";
+import seo from "../assets/seo.png";
+import kafka from "../assets/kafka.png";
+import figma from "../assets/figma.png";
+import vscode from "../assets/vscode.png";
+import cursor from "../assets/cursor.png";
+import linux from "../assets/linux.png";
 
 export default function Skills() {
   const [active, setActive] = useState("All");
@@ -24,27 +49,37 @@ export default function Skills() {
       { name: "Java", img: java, level: 70, projects: 3 },
       { name: "Python", img: python, level: 85, projects: 7 },
       { name: "JavaScript", img: JavaScript, level: 90, projects: 10 },
+      { name: "SQL", img: SQL, level: 75, projects: 4 },
     ],
 
-    Frontend: [
-      { name: "C", img: c, level: 80, projects: 5 },
-      { name: "Java", img: java, level: 70, projects: 3 },
-      { name: "Python", img: python, level: 85, projects: 7 },
-      { name: "JavaScript", img: JavaScript, level: 90, projects: 10 },
+    Frontend:[
+      { name: "React.js", img: react, level: 85, projects: 6 },
+      { name: "HTML/CSS", img: html, level: 70, projects: 3 },
+      { name: "Next.js", img: next, level: 80, projects: 4 },
+      { name: "Bootstrap", img: bootstrap, level: 75, projects: 3 },
+      { name: "TypeScript", img: typescript, level: 80, projects: 4 },
+      { name: "Tailwind CSS", img: tailwind, level: 75, projects: 3 },
     ],
 
     Backend: [
-      { name: "C", img: c, level: 80, projects: 5 },
-      { name: "Java", img: java, level: 70, projects: 3 },
-      { name: "Python", img: python, level: 85, projects: 7 },
-      { name: "JavaScript", img: JavaScript, level: 90, projects: 10 },
+      { name: "Node.js", img: node, level: 70, projects: 3 },
+      { name: "Express.js", img: express, level: 75, projects: 4 },
+      { name: "MongoDB", img: mongodb, level: 70, projects: 3 },
+      { name: "Go", img: go, level: 60, projects: 2 },
     ],
 
     "Tools/Others": [
-      { name: "C", img: c, level: 80, projects: 5 },
-      { name: "Java", img: java, level: 70, projects: 3 },
-      { name: "Python", img: python, level: 85, projects: 7 },
-      { name: "JavaScript", img: JavaScript, level: 90, projects: 10 },
+      { name: "GitHub", img: Git, level: 80, projects:"50+"},
+      { name: "Docker", img: Docker, level: 70, projects: 3},
+      { name: "AWS", img: aws, level: 85, projects: 7},
+      { name: "Kubernetes", img: kubernetes, level: 75, projects: 4},
+      { name: "CI/CD", img: cicd, level: 80, projects: 5},
+      { name: "SEO", img: seo, level: 70, projects:"8+"},
+      { name: "Cursor", img: cursor, level: 60, projects:"15+"},
+      { name: "Kafka", img: kafka, level: 65, projects: 2},
+      { name: "Figma", img: figma, level: 70, projects: 3},
+      { name: "VS Code", img: vscode, level: 90, projects:"100+"},
+      { name: "Linux", img: linux, level: 75, projects:"5+"},
     ],
   };
 
@@ -59,7 +94,11 @@ export default function Skills() {
     <section id="skills" className="min-h-[120vh] flex flex-col pt-20 md:pt-24 pb-20 md:pb-24 relative text-white bg-[#021c1e] px-6 overflow-hidden scroll-mt-24">
 
       {/* Heading */}
-      <div className="text-center mb-10">
+      <motion.div className="text-center mb-6"
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}>
         <h2 className="text-3xl md:text-4xl font-semibold px-6 py-3 rounded-full bg-black/80 backdrop-blur-md relative inline-block mx-auto">
           <span className="absolute inset-0 rounded-full p-[2px] bg-gradient-to-r from-[#ff00af] to-[#ffcc00] -z-10">
             <span className="block w-full h-full rounded-full bg-black"></span>
@@ -68,27 +107,52 @@ export default function Skills() {
             Skills
           </span>
         </h2>
-      </div>
+
+        <p className="mt-4 text-gray-400 max-w-3xl mx-auto text-base md:text-lg lg:text-xl leading-relaxed">
+          An overview of my{" "}
+          <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent font-semibold">
+            technical skill set
+          </span>
+            , built through hands-on experience with{" "}
+          <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent font-semibold">
+            modern tools and technologies
+          </span>
+            , enabling me to deliver{" "}
+          <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent font-semibold">
+            scalable and high-performance applications
+          </span>
+          .
+        </p>
+      </motion.div>
 
       {/* Buttons */}
-      <div className="grid grid-cols-5 gap-3 mb-8 max-w-3xl mx-auto">
+      <motion.div className="grid grid-cols-5 gap-3 mb-6 max-w-3xl mx-auto"
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}>
         {buttons.map((btn) => (
           <button
             key={btn}
             onClick={() => setActive(btn)}
             className={`px-3 py-2 rounded-full text-xs border ${
               active === btn
-                ? "bg-gradient-to-r from-[#ff00af] to-[#ffcc00] text-black font-semibold border border-yellow-400"
-                : "border border-[#ff00af] text-white bg-black"
+                ? "bg-gradient-to-r from-[#ff00af] to-[#ffcc00] text-white font-semibold border-2 border-yellow-400"
+                : "border-2 border-[#ff00af] text-white bg-black"
             }`}
           >
             {btn}
           </button>
         ))}
-      </div>
+      </motion.div>
 
       {/* Skills Container */}
-      <div className="w-full mx-auto border border-orange-500/20 rounded-xl p-6 bg-black">
+      <motion.div className="w-full mx-auto border border-orange-500/20 rounded-xl p-6 bg-black"
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      >
 
         {/* Label */}
         <div className="mb-4">
@@ -99,7 +163,11 @@ export default function Skills() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <motion.div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}>
           {filteredSkills.map((skill, i) => (
             <motion.div
               key={i}
@@ -121,14 +189,14 @@ export default function Skills() {
                 }, 25);
               }}
               whileHover={{ scale: 1.05 }}
-              className="flex flex-col justify-between px-4 py-3 rounded-lg border border-white/10 bg-[#0c1624] cursor-pointer"
+              className="flex flex-col justify-between px-2 py-2 rounded-lg border border-white/10 bg-[#0c1624] cursor-pointer"
             >
               {/* Top content */}
               <div className="flex items-center gap-3">
 
                 {/* Image */}
                 <div className="bg-black p-2 rounded-lg">
-                  <img src={skill.img} alt={skill.name} className="w-10 h-10"/>
+                  <img src={skill.img} alt={skill.name} className="w-12 h-12"/>
                 </div>
 
                 <span className="text-xl text-yellow-400">{skill.name}</span>
@@ -154,22 +222,26 @@ export default function Skills() {
               )}
             </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Popup */}
       <AnimatePresence>
         {hoveredSkill && (
           <motion.div className="fixed inset-0 flex items-center justify-center z-50 bg-orange-300/10 backdrop-blur-sm"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}>
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            >
               
               {/* Gradient Border */}
               <div className="p-[1px] rounded-2xl bg-gradient-to-r from-[#ff00af] to-[#ffcc00] w-[95%] max-w-5xl">
                 <motion.div
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: false, amount: 0.3 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
                   className="relative bg-[#000] rounded-2xl p-6">
                     
                     {/* LEFT BUTTON */}

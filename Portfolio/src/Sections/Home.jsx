@@ -56,10 +56,10 @@ return (<section id="home" className="w-full h-screen relative bg-black overflow
 
   <div className="relative z-10 h-full w-full max-w-7xl mx-auto px-2 flex items-center">
     <motion.div className="text-center lg:text-left max-w-2xl mt-20 sm:mt-24 lg:mt-0 lg:ml-10 xl:ml-16"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.6, duration: 0.8 }}
-    >
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}>
       
       <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 
           font-bold text-white t-12 sm:mt-8 lg:mt-8 mb-2 leading-tight break-words">
@@ -70,10 +70,10 @@ return (<section id="home" className="w-full h-screen relative bg-black overflow
       </h1>
       
       <motion.div className="mt-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-wide min-h-[1.6em]"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.8 }}
-      >
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}>
         <span className="bg-gradient-to-r from-[#ff00af] to-[#ffcc00] bg-clip-text text-transparent mr-4">I'm a</span>
         
         <span className="text-white">{roles[index].substring(0, subIndex)}</span>
@@ -81,9 +81,10 @@ return (<section id="home" className="w-full h-screen relative bg-black overflow
       </motion.div>
 
       <motion.p className="mt-1 text-base sm:text-lg md:text-xl text-white max-w-2xl mx-auto lg:mx-0"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6, duration: 0.8 }}>
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo at sapiente porro sunt illo sed ducimus est vitae fuga.
       </motion.p>
 
@@ -126,17 +127,16 @@ return (<section id="home" className="w-full h-screen relative bg-black overflow
 
 
       <motion.div className="mt-4 flex gap-4 flex-wrap justify-center lg:justify-start"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.6, duration: 0.8 }}
-      >
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}>
+
         <a href="#" className="px-6 py-2 rounded-full font-semibold text-white 
           bg-gradient-to-r from-[#ff00af] to-[#ffcc00] 
           border-2 border-yellow-400 transition-all duration-300
           hover:shadow-[0_0_20px_rgba(255,0,175,0.6)] hover:scale-105"
-          >
-            View Resume
-        </a>
+          >View Resume</a>
         
         <a href="#" className="relative px-6 py-2 rounded-full font-semibold text-white
           transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,0,175,0.6)]
@@ -149,16 +149,15 @@ return (<section id="home" className="w-full h-screen relative bg-black overflow
             <span className="relative z-10">Hire Me</span>
         </a>
       </motion.div>
-
     </motion.div>
 
 
     {/* Home Right Content */}
     <motion.div className="hidden lg:flex w-1/2 justify-center items-center"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.6, duration: 0.8 }}
-    >
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}>
       <div className="relative w-[360px] h-[360px]">
         
         {/* 🔥 CENTER */}
