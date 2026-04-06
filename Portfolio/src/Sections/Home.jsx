@@ -8,6 +8,11 @@ import { SiLeetcode } from "react-icons/si";
 import OrbitIcon from "../Components/OrbitIcon";
 import { FaReact, FaNodeJs, FaJava, FaPython } from "react-icons/fa";
 import { SiMongodb, SiTypescript, SiNextdotjs } from "react-icons/si";
+import { FaHtml5 } from "react-icons/fa";
+import { SiJavascript } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { FaDatabase } from "react-icons/fa";
+import { FaGitAlt } from "react-icons/fa";
 import { HiCode } from "react-icons/hi";
 
 
@@ -171,27 +176,27 @@ return (<section id="home" className="w-full h-screen relative bg-black overflow
             
             {/* TOP */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <OrbitIcon><FaReact /></OrbitIcon>
+              <OrbitIcon><FaDatabase className="text-blue-400"/></OrbitIcon>
             </div>
             
             {/* BOTTOM */}
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-              <OrbitIcon><FaNodeJs /></OrbitIcon>
+              <OrbitIcon><FaGitAlt className="text-orange-500"/></OrbitIcon>
             </div>
 
             {/* LEFT */}
             <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2">
-              <OrbitIcon><FaJava /></OrbitIcon>
+              <OrbitIcon><FaJava className="text-red-600"/></OrbitIcon>
             </div>
 
             {/* RIGHT */}
             <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2">
-              <OrbitIcon><FaPython /></OrbitIcon>
+              <OrbitIcon><FaPython className="text-yellow-500" /></OrbitIcon>
             </div>
 
             {/* TOP RIGHT */}
             <div className="absolute top-[15%] right-[15%]">
-              <OrbitIcon><SiTypescript /></OrbitIcon>
+              <OrbitIcon><SiTypescript className="text-blue-500" /></OrbitIcon>
             </div>
 
             {/* TOP LEFT */}
@@ -201,12 +206,12 @@ return (<section id="home" className="w-full h-screen relative bg-black overflow
 
             {/* BOTTOM RIGHT */}
             <div className="absolute bottom-[15%] right-[15%]">
-              <OrbitIcon><FaNodeJs /></OrbitIcon>
+              <OrbitIcon><FaNodeJs className="text-green-700" /></OrbitIcon>
             </div>
 
             {/* BOTTOM LEFT */}
             <div className="absolute bottom-[15%] left-[15%]">
-              <OrbitIcon><SiMongodb /></OrbitIcon>
+              <OrbitIcon><SiMongodb className="text-green-500" /></OrbitIcon>
             </div>
           </div>
         </div>
@@ -217,19 +222,19 @@ return (<section id="home" className="w-full h-screen relative bg-black overflow
           <div className="w-full h-full rounded-full bg-black relative">
             
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <OrbitIcon><SiMongodb /></OrbitIcon>
+              <OrbitIcon><FaReact className="text-blue-400"/></OrbitIcon>
             </div>
 
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-              <OrbitIcon><SiTypescript /></OrbitIcon>
+              <OrbitIcon><SiJavascript className="text-yellow-500"/></OrbitIcon>
             </div>
 
             <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2">
-              <OrbitIcon><SiNextdotjs className="text-white" /></OrbitIcon>
+              <OrbitIcon><FaHtml5 className="text-orange-500"/></OrbitIcon>
             </div>
 
             <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2">
-              <OrbitIcon><FaReact /></OrbitIcon>
+              <OrbitIcon><SiTailwindcss className="text-cyan-400"/></OrbitIcon>
             </div>
           
           </div>

@@ -358,7 +358,7 @@ const Contact = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="hidden md:block bg-gradient-to-r from-[#ff00af] to-[#ffcc00] p-[2px] rounded-xl"
+            className="hidden md:block p-[2px] bg-black rounded-xl"
           >
             <div className="bg-[#0a0a0a] rounded-xl p-6 h-full flex flex-col justify-between relative overflow-hidden">
 

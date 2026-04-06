@@ -45,39 +45,39 @@ export default function Skills() {
 
   const skillsData = {
     Languages: [
-      { name: "C", img: c, level: 80, projects: 5 },
-      { name: "Java", img: java, level: 70, projects: 3 },
-      { name: "Python", img: python, level: 85, projects: 7 },
-      { name: "JavaScript", img: JavaScript, level: 90, projects: 10 },
-      { name: "SQL", img: SQL, level: 75, projects: 4 },
+      { name: "C", img: c, level: 85, problemsSolved:"150+"},
+      { name: "Java", img: java, level: 85, problemsSolved:"500+"},
+      { name: "Python", img: python, level: 80, problemsSolved:"100+"},
+      { name: "JavaScript", img: JavaScript, level: 85, projects:"150+" },
+      { name: "SQL", img: SQL, level: 75, projects:"25+" },
     ],
 
     Frontend:[
-      { name: "React.js", img: react, level: 85, projects: 6 },
-      { name: "HTML/CSS", img: html, level: 70, projects: 3 },
-      { name: "Next.js", img: next, level: 80, projects: 4 },
-      { name: "Bootstrap", img: bootstrap, level: 75, projects: 3 },
-      { name: "TypeScript", img: typescript, level: 80, projects: 4 },
-      { name: "Tailwind CSS", img: tailwind, level: 75, projects: 3 },
+      { name: "React.js", img: react, level: 85, projects:"25+"},
+      { name: "HTML/CSS", img: html, level: 90, projects: "45+" },
+      { name: "Next.js", img: next, level: 80, projects: "25+" },
+      { name: "Bootstrap", img: bootstrap, level: 85, projects: "15+" },
+      { name: "TypeScript", img: typescript, level: 80, projects: "25+" },
+      { name: "Tailwind CSS", img: tailwind, level: 85, projects: "45+" },
     ],
 
     Backend: [
-      { name: "Node.js", img: node, level: 70, projects: 3 },
-      { name: "Express.js", img: express, level: 75, projects: 4 },
-      { name: "MongoDB", img: mongodb, level: 70, projects: 3 },
-      { name: "Go", img: go, level: 60, projects: 2 },
+      { name: "Node.js", img: node, level: 80, projects:"15+" },
+      { name: "Express.js", img: express, level: 80, projects:"15+" },
+      { name: "MongoDB", img: mongodb, level: 80, projects:"15+" },
+      { name: "Go", img: go, level: 75, projects:"5+" },
     ],
 
     "Tools/Others": [
-      { name: "GitHub", img: Git, level: 80, projects:"50+"},
-      { name: "Docker", img: Docker, level: 70, projects: 3},
-      { name: "AWS", img: aws, level: 85, projects: 7},
-      { name: "Kubernetes", img: kubernetes, level: 75, projects: 4},
-      { name: "CI/CD", img: cicd, level: 80, projects: 5},
-      { name: "SEO", img: seo, level: 70, projects:"8+"},
-      { name: "Cursor", img: cursor, level: 60, projects:"15+"},
-      { name: "Kafka", img: kafka, level: 65, projects: 2},
-      { name: "Figma", img: figma, level: 70, projects: 3},
+      { name: "GitHub", img: Git, level: 90, projects:"100+"},
+      { name: "Docker", img: Docker, level: 75, projects: "5+"},
+      { name: "AWS", img: aws, level: 75, projects: "5+"},
+      { name: "Kubernetes", img: kubernetes, level: 75, projects: "5+"},
+      { name: "CI/CD", img: cicd, level: 75, projects: "5+"},
+      { name: "SEO", img: seo, level: 85, projects:"10+"},
+      { name: "Cursor", img: cursor, level: 70, projects:"5+"},
+      { name: "Kafka", img: kafka, level: 75, projects: "5+"},
+      { name: "Figma", img: figma, level: 80, projects: "15+"},
       { name: "VS Code", img: vscode, level: 90, projects:"100+"},
       { name: "Linux", img: linux, level: 75, projects:"5+"},
     ],
@@ -294,7 +294,7 @@ export default function Skills() {
                     {/* CENTER STATS */}
                     <div className="grid grid-cols-2 gap-4">
                       <div className="p-4 rounded-xl border border-white/10 bg-[#0f172a]">
-                      <p className="text-sm text-gray-400 mb-3">
+                      <p className="text-sm text-[#ffcc00] mb-3">
                         Experience Level
                       </p>
 
@@ -306,16 +306,33 @@ export default function Skills() {
                       </div>
 
                       <div className="flex justify-end mt-2">
-                        <span className="text-xs text-gray-400">Advanced</span>
+                        <span className="text-xs text-[#ffcc00]">
+                          {hoveredSkill?.level <= 45
+                            ? "Beginner"
+                            : hoveredSkill?.level <= 75
+                            ? "Intermediate"
+                            : "Advanced"
+                          }
+                        </span>
                       </div>
                     </div>
                     
                     {/* Projects */}
                     <div className="p-4 rounded-xl border border-white/10 bg-[#0f172a] flex flex-col justify-center">
-                      <p className="text-sm text-gray-400">Projects Completed</p>
+                      {(() => {const item = {
+                        label: hoveredSkill?.problemsSolved ? "Problems Solved" : "Projects Completed",
+                        value: hoveredSkill?.problemsSolved || hoveredSkill?.projects
+                      };
+                      return null;
+                      })()}
+                      
+                      <p className="text-sm text-[#ffcc00]">
+                        {hoveredSkill?.problemsSolved ? "Problems Solved" : "Projects Completed"}</p>
                       
                       <div className="flex justify-center mt-2">
-                        <p className="text-3xl font-bold text-[#ff00af]">{hoveredSkill.projects || "10+"}</p>
+                        <p  className="text-2xl font-bold text-[#ff00af]">
+                          {hoveredSkill?.problemsSolved || hoveredSkill?.projects}
+                        </p>
                       </div>
                     </div>
                   </div>
